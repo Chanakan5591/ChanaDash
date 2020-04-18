@@ -16,7 +16,7 @@ window.onload = function() {
 
 //geoFindme is the geolocation; will retrieve coordinates
 function geoFindMe() {
-    var getIP = 'http://ip-api.com/json/';
+    var getIP = 'http://208.95.112.1/json/';
     $.getJSON(getIP).done(function(location) {
         localStorage.setItem('lat', location.lat);
         localStorage.setItem('lon', location.lon);

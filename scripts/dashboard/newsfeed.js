@@ -1,4 +1,4 @@
-const NEWS_API_KEY = 'bdff358621fc463bbf3d45c670234c7d';
+const NEWS_API_KEY = '3feaa65b7d974de3a28a5d7526581b25';
 
 let settings = {
 	'async': true,

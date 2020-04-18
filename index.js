@@ -42,5 +42,5 @@ app.on('activate', () => {
 
 app.on('ready', () => {
 	mainWindow = createMainWindow();
-	mainWindow.maximize();
+	mainWindow.setFullScreen(true);
 });

@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('#settings-window').hide();
     toggleDiv();
     toggleSearch();
-    toggleWeather();
+    toggleMultimedia();
     toggleQuotes();
     toggleTodo();
 });
@@ -26,12 +26,12 @@ function toggleSearch() {
     });
 }
 
-function toggleWeather() {
-    $('#onoffWeather').click(function() {
+function toggleMultimedia() {
+    $('#onoffMultimedia').click(function() {
         if ($(this).is(':checked')) {
-            $('#weather-container').show();
+            $('#multimedia').show();
         } else {
-            $('#weather-container').hide();
+            $('#multimedia').hide();
         }
     });
 }

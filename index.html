@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CampDash</title>
+    <title>ChanaDash - v1.0.0-beta</title>
     <!-- css link -->
     <link rel="stylesheet" href="./styles/dashboard.css">
     <!-- Font Awesome -->
@@ -20,9 +20,38 @@
 	            <i style='color: black;' class='fa fa-search'></i><input id='input-search' name='q' type="search" autocomplete="off">
             </form>
         </div>
+        <div id="battery">
+            <font color="black"><div id="battery-level"></div></font>
+        </div>
+        <div id="multimedia">
+            <div id="title">Accessories</div>
+            <div id="item">
+                <div style="width: 70px; display: inline-block;" id="kodi">
+                    <div id="imgkodi">
+                        <img onclick="openKodi()" src="https://kodi.wiki/images/8/8e/Thumbnail-symbol-transparent.png" height="70" width="70">
+                    </div>
+                    <div id="textkodi">
+                        Kodi
+                    </div>
+                </div>
+                <div style="width: 70px; display: inline-block;" id="map">
+                    <div id="imgmap">
+                        <img onclick="openMap()" src="http://lh3.googleusercontent.com/v9HYZJycsal-mKM2U4Q756EE-bh6m0254fLl27bSWrWxolEFUEzyEdkLWL_oB17lHwU=w300" height="70" width="70"> <!-- TODOS Show The Maps For location! -->
+                    </div>
+                    <div id="textmap">
+                        Maps
+                    </div>
+                  <!-- https://wego.here.com -->
+                </div>
+            </div>
+        </div>
+        <div id="weather">
+            <center><a class="weatherwidget-io" href="https://forecast7.com/en/13d76100d50/bangkok/" data-label_1="BANGKOK" data-label_2="WEATHER" data-theme="weather_one" style="width: 502px;">BANGKOK WEATHER</a></center>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');</script>
+        </div>
 
     <!-- ======     Weather Widget    ======  -->
-        <div id="weather-container">
+<!--        <div id="weather-container">
           <div id="icon-temp" class="flex-container">
             <span id='weather-value'></span>
           </div>
@@ -34,7 +63,7 @@
     <!-- ======     Center Time, Greeting, and Focus Widget    ======  -->
         <div id="greeting-container">
             <span id='time'></span>
-            <span id='greeting-wrap'><span id='greeting'></span>, <span id='username'>name</span></span>
+            <span id='greeting-wrap'><span id='greeting'></span>, <span id='username'>Chanakan!</span></span>
             <button id="newsfeed-button" class="newsfeed-buttons">News Feed</button>
             <div id="newsfeed-container">
             <button class="newsfeed-buttons">Close Feed</button>
@@ -64,10 +93,10 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>Weather</td>
+                  <td>Multimedia</td>
                   <td>
-                    <div class="onoffswitch"><input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="onoffWeather" checked>
-                    <label class="onoffswitch-label" for="onoffWeather"></label></div>
+                    <div class="onoffswitch"><input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="onoffMultimedia" checked>
+                    <label class="onoffswitch-label" for="onoffMultimedia"></label></div>
                   </td>
                 </tr>
                 <tr>
@@ -129,5 +158,7 @@
   	<script src="scripts/dashboard/quote.js"></script>
   	<script src="scripts/dashboard/todo.js"></script>
   	<script src="scripts/dashboard/newsfeed.js"></script>
+        <script src="scripts/dashboard/battery.js"></script>
+        <script src="scripts/dashboard/accessories.js"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@ function updateClock() {
 
   greeting.innerHTML = 'Good evening'
   if (time[0] < 12/*noon*/ && time[0] > 3/*am*/) greeting.innerHTML = 'Good morning';
-  if (time[0] > 12/*noon*/ && time[0] < 16/*4 pm*/) greeting.innerHTML = 'Good afternoon';
+  if (time[0] >= 12/*noon*/ && time[0] < 16/*4 pm*/) greeting.innerHTML = 'Good afternoon';
 
   clockLocation.innerText = time.join(':');
   setTimeout(updateClock, 1000);
